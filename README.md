@@ -20,7 +20,7 @@ Prints the full sequence starting from 27 until it hits 1.
 python collatz_graph.py longest 1000
 ```
 
-Finds which number ≤ 1000 produces the longest sequence and prints it.
+Finds which number <= 1000 produces the longest sequence and prints it.
 
 ```bash
 python collatz_graph.py reverse 10
@@ -32,18 +32,18 @@ Shows every number that maps directly to 10 in one Collatz step (the reverse nei
 python collatz_graph.py tree 50
 ```
 
-Builds the reverse adjacency list for numbers 1–50 and prints a few stats plus sample edges.
+Builds the reverse adjacency list for numbers 1 to 50 and prints a few stats plus sample edges.
 
 ## How the reverse step works
 
-From any n you can always go back to 2n (the even predecessor).  
+From any n you can always go back to 2n (the even predecessor).
 You can also go back to (n-1)/3 when that value is a positive odd integer and actually produces n under the normal rule.
 
-That’s all the code needs.
+That's all the code needs.
 
 ## Why this exists
 
-I wanted a tiny playground for mixing number theory with basic graph ideas—forward paths, reverse branching, longest path under a bound—without pulling in NetworkX or anything heavy. Everything stays in the standard library.
+I wanted a tiny playground for mixing number theory with basic graph ideas: forward paths, reverse branching, longest path under a bound. No NetworkX or anything heavy. Everything stays in the standard library.
 
 ## License
 
