@@ -1,12 +1,12 @@
 # Collatz Graph
 
-Small pure-Python CLI that looks at the Collatz conjecture through graphs.
+Take any positive integer. If it is even, divide by 2. If it is odd, multiply by 3 and add 1. Repeat. The Collatz conjecture says you always eventually reach 1, no matter where you start. Nobody has proved it for all numbers, but it has been checked for enormous ranges.
 
-Every positive integer has a next number: if even, divide by 2; if odd, do 3n+1. The conjecture says you always reach 1. This tool treats those steps as edges in a directed graph so you can explore sequences, reverse trees, and longest chains.
+This small tool treats those steps as edges in a directed graph. You can follow a number forward to 1, look at the reverse directions (which numbers can lead to a given number), and find the longest chain inside a range.
 
 ## Requirements
 
-Just Python 3.9+. No third-party packages.
+Python 3.9+. No third-party packages.
 
 ## Usage
 
@@ -38,12 +38,6 @@ Builds the reverse adjacency list for numbers 1 to 50 and prints a few stats plu
 
 From any n you can always go back to 2n (the even predecessor).
 You can also go back to (n-1)/3 when that value is a positive odd integer and actually produces n under the normal rule.
-
-That's all the code needs.
-
-## Why this exists
-
-I wanted a tiny playground for mixing number theory with basic graph ideas: forward paths, reverse branching, longest path under a bound. No NetworkX or anything heavy. Everything stays in the standard library.
 
 ## License
 
